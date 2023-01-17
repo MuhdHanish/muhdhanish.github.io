@@ -2,6 +2,7 @@ function validateform(){
   var name = document.form.name.value;
   var email = document.form.email.value;
   var subject =document.form.subject.value;
+  var number=document.form.number.value;
   var text = document.form.message.value;
   var regex = /^[a-zA-Z]\w+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/gm;
   var err=document.getElementById("error-display");
@@ -36,6 +37,14 @@ function validateform(){
   }
     if(text.length<10){
     err.innerHTML="should contain  at least 10 letters !";
+    return false;
+  }
+  if(number==""){
+    err.innerHTML="number is empty !";
+    return false;
+  }
+    if(number<11){
+    err.innerHTML="Enter your valid phone number";
     return false;
   }
   err.innerHTML="Email response reported!";
