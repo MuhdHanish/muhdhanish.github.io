@@ -5,13 +5,13 @@ $("#Fom-response").submit((e)=>{
       data:$("#Fom-response").serialize(),
       method:"post",
       success:function (response){
-          alert("Form submitted successfully")
+          alert("Email Responded Successfully")
+          // document.getElementById("sent-message").style.display = "block"
           window.location.reload()
           //window.location.href="https://google.com"
       },
       error:function (err){
           alert("Something Error")
-
       }
   })
 })
